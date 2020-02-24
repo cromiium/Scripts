@@ -5,7 +5,7 @@ print("\n\n\n" + "Please enter an English word/phrase (no numbers...):")
 pig_word = eng_word[1:] + eng_word[0] + "ay"
 print(pig_word)
 '''
-
+#TODO: pig latin -> english
 eng_sent = input()
 eng_sent = eng_sent.split()
 
@@ -39,9 +39,12 @@ def translate_word(eng_word):
             vowel_index+=1
     return pig_word
 
-pig_list = []
-for word in eng_sent:
-    pig_list.append(translate_word(word))
-pig_sent=" "
-pig_sent = (" ".join(pig_list))
-print(pig_sent)
+def main():
+    pig_list = []
+    for word in eng_sent:
+        pig_list.append(translate_word(word))
+    pig_sent=" "
+    pig_sent = (" ".join(pig_list))
+    print(pig_sent)
+
+main()
